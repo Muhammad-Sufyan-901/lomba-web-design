@@ -268,13 +268,14 @@ button {
 .about__image {
   position: absolute;
   overflow: hidden;
-  width: 461px;
-  height: 601px;
+  top: 5rem;
+  width: 400px;
+  height: 550px;
 }
 
 .about__image img {
   max-width: initial;
-  width: 490px;
+  width: 100%;
   object-fit: cover;
 }
 
