@@ -23,7 +23,7 @@
 
         <ul class="navbar__container">
           <li class="navbar__item">
-            <a href="#" class="navbar__link active">Home</a>
+            <a href="#home" class="navbar__link active-link">Home</a>
           </li>
           <li class="navbar__item">
             <a href="#about" class="navbar__link">About</a>
@@ -48,9 +48,136 @@
 
     <!--==================== Main Content ====================-->
     <main class="main">
-      <div class="home section">
-        <h1>Home</h1>
-      </div>
+      <!--==================== Home Content ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              Discover <br />
+              Most Intelligent <br />
+              Smartphone
+            </h1>
+            <p class="home__description">Find a variety of smartphones that suit you very easily, forget all difficulties in finding a gadgets for you.</p>
+            <div class="home__value">
+              <div>
+                <h1 class="home__value-title">
+                  2K
+                  <span>+</span>
+                </h1>
+                <span class="home__value-description">
+                  Premium <br />
+                  Products
+                </span>
+              </div>
+
+              <div>
+                <h1 class="home__value-title">
+                  9K
+                  <span>+</span>
+                </h1>
+                <span class="home__value-description">
+                  Happy <br />
+                  Customer
+                </span>
+              </div>
+
+              <div>
+                <h1 class="home__value-title">
+                  7K
+                  <span>+</span>
+                </h1>
+                <span class="home__value-description">
+                  Outlet <br />
+                  Branch
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home__images">
+            <div class="home__image">
+              <img src="./Assets/Images/home.png" alt="Home Products" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== About Content ====================-->
+      <section class="section about" id="about">
+        <div class="about__container container grid">
+          <div class="about__images">
+            <div class="about__image">
+              <img src="./Assets/Images/home.png" alt="About Image" />
+            </div>
+          </div>
+
+          <div class="about__content">
+            <div class="about__data">
+              <span class="about__subtitle"> Our Excellence </span>
+              <h2 class="about__title">Excellence in our Smartphone</h2>
+              <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ad voluptate soluta dolor inventore cupiditate fugiat repudiandae, ipsum laboriosam quaerat.</p>
+            </div>
+
+            <div class="about__accordion">
+              <div class="about__accordion-item">
+                <header class="about__accordion-header">
+                  <i class="bx bxs-mobile about__accordion-icon"></i>
+                  <h3 class="about__accordion-title">6.5 inch OLED screen with ProMotion</h3>
+                  <div class="about__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="about__accordion-content">
+                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </div>
+
+              <div class="about__accordion-item">
+                <header class="about__accordion-header">
+                  <i class="bx bxs-battery about__accordion-icon"></i>
+                  <h3 class="about__accordion-title">5500 mAh Battery</h3>
+                  <div class="about__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="about__accordion-content">
+                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </div>
+
+              <div class="about__accordion-item">
+                <header class="about__accordion-header">
+                  <i class="bx bxs-camera about__accordion-icon"></i>
+                  <h3 class="about__accordion-title">48MP of Camera</h3>
+                  <div class="about__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="about__accordion-content">
+                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </div>
+
+              <div class="about__accordion-item">
+                <header class="about__accordion-header">
+                  <i class="bx bx-chip about__accordion-icon"></i>
+                  <h3 class="about__accordion-title">Snapdragon 680 Chipset</h3>
+                  <div class="about__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="about__accordion-content">
+                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--==================== Footer ====================-->
@@ -151,5 +278,8 @@
         </div>
       </div>
     </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="./Assets/Scripts/script.js"></script>
   </body>
 </html>

@@ -124,8 +124,12 @@ button {
   width: 100%;
   z-index: var(--z-fixed);
   transition: 0.4s;
+  background-color: transparent;
+}
+
+.header-scrolled {
   background-color: var(--color-white);
-  box-shadow: 0 4px 8px hsla(228, 4%, 15%, 0.1);
+  box-shadow: 0 4px 16px hsla(228, 4%, 15%, 0.1);
 }
 
 .navbar {
@@ -152,14 +156,15 @@ button {
 .navbar__link {
   color: hsla(0, 0%, 7%, 0.7);
   border-bottom: 3px solid transparent;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .navbar__link:hover {
   color: var(--color-secondary);
 }
 
-.navbar__link.active {
+/* Active link */
+.active-link {
   border-color: var(--color-secondary);
   color: var(--color-secondary);
 }
@@ -186,9 +191,182 @@ button {
 .home {
   width: 100vw;
   height: 100vh;
+}
+
+.home__container {
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 5rem;
+  column-gap: 6rem;
+}
+
+.home__data {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  line-height: 120%;
+  margin-bottom: 2rem;
+}
+
+.home__description {
+  color: var(--color-light);
+  margin-bottom: 3rem;
+}
+
+.home__value-title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.home__value-title span {
+  color: hsl(228, 66%, 47%);
+}
+
+.home__value-description {
+  display: flex;
+  font-size: var(--small-font-size);
+  color: var(--color-light);
+}
+
+.home__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.home__image {
+  width: 90%;
+  height: 90%;
+}
+
+.home__image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.home__value {
+  display: flex;
+  column-gap: 4.5rem;
+}
+
+/* ========== About ========== */
+.about__container {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  align-items: flex-start;
+}
+
+.about__images {
+  position: relative;
   display: flex;
   justify-content: center;
+}
+
+.about__image {
+  position: absolute;
+  overflow: hidden;
+  width: 461px;
+  height: 601px;
+}
+
+.about__image img {
+  max-width: initial;
+  width: 490px;
+  object-fit: cover;
+}
+
+.about__subtitle {
+  color: hsl(228, 66%, 47%);
+  font-size: var(--font-medium);
+  display: block;
+}
+
+.about__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about__description {
+  font-size: var(--normal-font-size);
+  margin-bottom: 2.5rem;
+}
+
+.about__accordion {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.about__accordion-item {
+  background-color: var(--color-white);
+  border: 2px solid hsl(228, 99%, 98%);
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.about__accordion-header {
+  display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.about__accordion-icon {
+  background-color: hsl(228, 100%, 97%);
+  padding: 5px;
+  border-radius: 0.25rem;
+  font-size: 18px;
+  color: var(--color-secondary);
+  margin-right: 0.75rem;
+  transition: 0.3s;
+}
+
+.about__accordion-title {
+  font-size: var(--normal-font-size);
+}
+
+.about__accordion-arrow {
+  display: inline-flex;
+  background-color: hsl(228, 100%, 97%);
+  padding: 0.25rem;
+  color: var(--color-secondary);
+  border-radius: 2px;
+  font-size: 10px;
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.about__accordion-arrow i {
+  transition: 0.4s;
+}
+
+.about__accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.25s ease;
+}
+
+.about__accordion-description {
+  font-size: var(--small-font-size);
+  padding: 1.25rem 2.5rem 1rem 2.75rem;
+}
+
+/*Rotate icon and add shadows*/
+.accordion-open {
+  box-shadow: 0 12px 32px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .about__accordion-icon {
+  box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .about__accordion-arrow {
+  box-shadow: 0 2px 4px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .about__accordion-arrow i {
+  transform: rotate(-180deg);
 }
 
 /* ========== Footer ========== */
