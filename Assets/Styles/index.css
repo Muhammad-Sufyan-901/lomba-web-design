@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: Phantom;
+  src: url(../font-phantom/DDT\ W00\ Condensed\ SemiBold.ttf);
+}
 
 :root {
   --header-height: 5rem;
@@ -154,10 +158,10 @@ button {
 }
 
 .navbar__logo {
-  font-size: var(--h2-font-size);
-  letter-spacing: 3px;
-  font-weight: var(--font-medium);
+  font-size: 31px;
+  font-weight: 500;
   color: var(--color-primary);
+  font-family: Phantom;
 }
 
 .navbar__container {
