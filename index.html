@@ -26,13 +26,13 @@
             <a href="#home" class="navbar__link active-link">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="#about" class="navbar__link">About</a>
+            <a href="#about" class="navbar__link">What's New</a>
           </li>
           <li class="navbar__item">
             <a href="#products" class="navbar__link">Products</a>
           </li>
           <li class="navbar__item">
-            <a href="#collaboration" class="navbar__link">Collaboration</a>
+            <a href="#features" class="navbar__link">Features</a>
           </li>
           <li class="navbar__item">
             <a href="#article" class="navbar__link">Article</a>
@@ -52,46 +52,13 @@
       <section class="home section" id="home">
         <div class="home__container container grid">
           <div class="home__data">
+            <span class="home__discount">STARTED AT 60% OFF & FREE SHIPPING</span>
             <h1 class="home__title">
-              Discover <br />
-              Most Intelligent <br />
-              Smartphone
+              Discover Most <br />
+              Intelligent Smartphone
             </h1>
             <p class="home__description">Find a variety of smartphones that suit you very easily, forget all difficulties in finding a gadgets for you.</p>
-            <div class="home__value">
-              <div>
-                <h1 class="home__value-title">
-                  2K
-                  <span>+</span>
-                </h1>
-                <span class="home__value-description">
-                  Premium <br />
-                  Products
-                </span>
-              </div>
-
-              <div>
-                <h1 class="home__value-title">
-                  9K
-                  <span>+</span>
-                </h1>
-                <span class="home__value-description">
-                  Happy <br />
-                  Customer
-                </span>
-              </div>
-
-              <div>
-                <h1 class="home__value-title">
-                  7K
-                  <span>+</span>
-                </h1>
-                <span class="home__value-description">
-                  Outlet <br />
-                  Branch
-                </span>
-              </div>
-            </div>
+            <button class="button home__button">Get Started</button>
           </div>
 
           <div class="home__images">
@@ -102,80 +69,101 @@
         </div>
       </section>
 
+      <!--==================== Value Content ====================-->
+      <div class="value__container container">
+        <div class="value__content">
+          <div class="value__box">
+            <h1 class="value__box-title">2K<span>+</span></h1>
+            <span class="value__box-description">
+              Premium <br />
+              Products
+            </span>
+          </div>
+
+          <div class="value__box">
+            <h1 class="value__box-title">9K<span>+</span></h1>
+            <span class="value__box-description">
+              Happy <br />
+              Customer
+            </span>
+          </div>
+
+          <div class="value__box">
+            <h1 class="value__box-title">3K<span>+</span></h1>
+            <span class="value__box-description">
+              Outlet <br />
+              Branches
+            </span>
+          </div>
+        </div>
+      </div>
+
       <!--==================== About Content ====================-->
       <section class="section about" id="about">
         <div class="about__container container grid">
-          <div class="about__images">
-            <div class="about__image">
-              <img src="./Assets/Images/home.png" alt="About Image" />
-            </div>
-          </div>
+          <span class="section__subtitle">What's New</span>
+          <h2 class="section__title">Our New Products</h2>
+          <p class="section__description">We provided a New Smartphones with many awesome features for our customer satisfaction</p>
 
-          <div class="about__content">
+          <div class="about__content grid">
             <div class="about__data">
-              <span class="section__subtitle"> Our Excellence </span>
-              <h2 class="section__title">Excellence in our latest Smartphone</h2>
-              <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ad voluptate soluta dolor inventore cupiditate fugiat repudiandae, ipsum laboriosam quaerat.</p>
+              <article class="about__data-content">
+                <header class="about__data-header">
+                  <i class="bx bxs-mobile about__data-icon"></i>
+                  <h3 class="about__data-title">6.5 inch OLED screen with ProMotion</h3>
+                </header>
+                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+              </article>
+
+              <article class="about__data-content">
+                <header class="about__data-header">
+                  <i class="bx bxs-battery about__data-icon"></i>
+                  <h3 class="about__data-title">5500 mAh Battery</h3>
+                </header>
+                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+              </article>
+
+              <article class="about__data-content">
+                <header class="about__data-header">
+                  <i class="bx bxs-camera about__data-icon"></i>
+                  <h3 class="about__data-title">64MP of Camera</h3>
+                </header>
+                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+              </article>
             </div>
 
-            <div class="about__accordion">
-              <div class="about__accordion-item">
-                <header class="about__accordion-header">
-                  <i class="bx bxs-mobile about__accordion-icon"></i>
-                  <h3 class="about__accordion-title">6.5 inch OLED screen with ProMotion</h3>
-                  <div class="about__accordion-arrow">
-                    <i class="bx bxs-down-arrow"></i>
-                  </div>
+            <div class="about__images">
+              <img src="./Assets/Images/home.png" alt="What's New Products Images" />
+            </div>
+
+            <div class="about__data">
+              <article class="about__data-content">
+                <header class="about__data-header">
+                  <i class="bx bx-chip about__data-icon"></i>
+                  <h3 class="about__data-title">Snapdragon 880 Chipset</h3>
                 </header>
+                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+              </article>
 
-                <div class="about__accordion-content">
-                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
-                </div>
-              </div>
-
-              <div class="about__accordion-item">
-                <header class="about__accordion-header">
-                  <i class="bx bxs-battery about__accordion-icon"></i>
-                  <h3 class="about__accordion-title">5500 mAh Battery</h3>
-                  <div class="about__accordion-arrow">
-                    <i class="bx bxs-down-arrow"></i>
-                  </div>
+              <article class="about__data-content">
+                <header class="about__data-header">
+                  <i class="bx bxs-memory-card about__data-icon"></i>
+                  <h3 class="about__data-title">8GB RAM & 128GB Internal Storage</h3>
                 </header>
+                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+              </article>
 
-                <div class="about__accordion-content">
-                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
-                </div>
-              </div>
-
-              <div class="about__accordion-item">
-                <header class="about__accordion-header">
-                  <i class="bx bxs-camera about__accordion-icon"></i>
-                  <h3 class="about__accordion-title">64MP of Camera</h3>
-                  <div class="about__accordion-arrow">
-                    <i class="bx bxs-down-arrow"></i>
-                  </div>
+              <article class="about__data-content">
+                <header class="about__data-header">
+                  <i class="bx bxs-thermometer about__data-icon"></i>
+                  <h3 class="about__data-title">20° Average Temperature</h3>
                 </header>
-
-                <div class="about__accordion-content">
-                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
-                </div>
-              </div>
-
-              <div class="about__accordion-item">
-                <header class="about__accordion-header">
-                  <i class="bx bx-chip about__accordion-icon"></i>
-                  <h3 class="about__accordion-title">Snapdragon 880 Chipset</h3>
-                  <div class="about__accordion-arrow">
-                    <i class="bx bxs-down-arrow"></i>
-                  </div>
-                </header>
-
-                <div class="about__accordion-content">
-                  <p class="about__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
-                </div>
-              </div>
+                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+              </article>
             </div>
           </div>
+
+          <button class="button about__button">Know More</button>
         </div>
       </section>
 
@@ -183,150 +171,251 @@
       <section class="products section" id="products">
         <div class="container">
           <span class="section__subtitle">Best Choises</span>
-          <h2 class="section__title">Our Popular Products.</h2>
+          <h2 class="section__title">Our Popular Products</h2>
 
-          <div class="products__container grid">
-            <article class="products__card">
-              <img src="assets/Images/home.png" alt="Products Image" class="products__img" />
-
-              <div class="products__data">
-                <div class="products__data-prices">
-                  <h3 class="products__price">$500</h3>
-                  <span class="products__category">New Products</span>
-                </div>
-                <h2 class="products__title">Phantom Spectrum Z1</h2>
-                <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse.</p>
-                <div class="products__buttons">
-                  <a href="#" class="products__buy-button">
-                    Buy
-                    <i class="bx bx-cart"></i>
-                  </a>
-                  <a href="#" class="products__view-button">
-                    View More
-                    <i class="bx bx-chevron-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="products__card">
-              <img src="assets/Images/home.png" alt="Products Image" class="products__img" />
-
-              <div class="products__data">
-                <div class="products__data-prices">
-                  <h3 class="products__price">$500</h3>
-                  <span class="products__category">New Products</span>
-                </div>
-                <h2 class="products__title">Phantom Spectrum Z1</h2>
-                <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse.</p>
-                <div class="products__buttons">
-                  <a href="#" class="products__buy-button">
-                    Buy
-                    <i class="bx bx-cart"></i>
-                  </a>
-                  <a href="#" class="products__view-button">
-                    View More
-                    <i class="bx bx-chevron-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="products__card">
-              <img src="assets/Images/home.png" alt="Products Image" class="products__img" />
-
-              <div class="products__data">
-                <div class="products__data-prices">
-                  <h3 class="products__price">$500</h3>
-                  <span class="products__category">New Products</span>
-                </div>
-                <h2 class="products__title">Phantom Spectrum Z1</h2>
-                <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse.</p>
-                <div class="products__buttons">
-                  <a href="#" class="products__buy-button">
-                    Buy
-                    <i class="bx bx-cart"></i>
-                  </a>
-                  <a href="#" class="products__view-button">
-                    View More
-                    <i class="bx bx-chevron-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="products__card">
-              <img src="assets/Images/home.png" alt="Products Image" class="products__img" />
-
-              <div class="products__data">
-                <div class="products__data-prices">
-                  <h3 class="products__price">$500</h3>
-                  <span class="products__category">New Products</span>
-                </div>
-                <h2 class="products__title">Phantom Spectrum Z1</h2>
-                <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse.</p>
-                <div class="products__buttons">
-                  <a href="#" class="products__buy-button">
-                    Buy
-                    <i class="bx bx-cart"></i>
-                  </a>
-                  <a href="#" class="products__view-button">
-                    View More
-                    <i class="bx bx-chevron-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="products__card">
-              <img src="assets/Images/home.png" alt="Products Image" class="products__img" />
-
-              <div class="products__data">
-                <div class="products__data-prices">
-                  <h3 class="products__price">$500</h3>
-                  <span class="products__category">New Products</span>
-                </div>
-                <h2 class="products__title">Phantom Spectrum Z1</h2>
-                <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse.</p>
-                <div class="products__buttons">
-                  <a href="#" class="products__buy-button">
-                    Buy
-                    <i class="bx bx-cart"></i>
-                  </a>
-                  <a href="#" class="products__view-button">
-                    View More
-                    <i class="bx bx-chevron-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="products__card">
-              <img src="assets/Images/home.png" alt="Products Image" class="products__img" />
-
-              <div class="products__data">
-                <div class="products__data-prices">
-                  <h3 class="products__price">$500</h3>
-                  <span class="products__category">New Products</span>
-                </div>
-                <h2 class="products__title">Phantom Spectrum Z1</h2>
-                <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse.</p>
-                <div class="products__buttons">
-                  <a href="#" class="products__buy-button">
-                    Buy
-                    <i class="bx bx-cart"></i>
-                  </a>
-                  <a href="#" class="products__view-button">
-                    View More
-                    <i class="bx bx-chevron-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
+          <!-- Cards Looped on script.js files and rendered in "products-container" as child elements (based on React concepts) -->
+          <div class="products__container grid" id="products-container"></div>
 
           <div class="show-more">
             <button class="show-more__button">Show More</button>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Features Content ====================-->
+      <section class="features section" id="features">
+        <div class="features__container container grid">
+          <div class="features__images">
+            <div class="features__image">
+              <img src="./Assets/Images/home.png" alt="Features Images" />
+            </div>
+          </div>
+
+          <div class="features__content">
+            <div class="features__header">
+              <span class="section__subtitle"> Our Excellence</span>
+              <h2 class="section__title">Excellence We Provided In Our Smartphone</h2>
+              <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ad voluptate soluta dolor inventore cupiditate fugiat repudiandae, ipsum laboriosam quaerat.</p>
+            </div>
+
+            <div class="features__accordion">
+              <article class="features__accordion-item">
+                <header class="features__accordion-header">
+                  <i class="bx bxs-award features__accordion-icon"></i>
+                  <h3 class="features__accordion-title">2 Years Of Warranty</h3>
+                  <div class="features__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="features__accordion-content">
+                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__accordion-item">
+                <header class="features__accordion-header">
+                  <i class="bx bxs-certification features__accordion-icon"></i>
+                  <h3 class="features__accordion-title">2 Years Of Warranty</h3>
+                  <div class="features__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="features__accordion-content">
+                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__accordion-item">
+                <header class="features__accordion-header">
+                  <i class="bx bx-headphone features__accordion-icon"></i>
+                  <h3 class="features__accordion-title">2 Years Of Warranty</h3>
+                  <div class="features__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="features__accordion-content">
+                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__accordion-item">
+                <header class="features__accordion-header">
+                  <i class="bx bx-signal-4 features__accordion-icon"></i>
+                  <h3 class="features__accordion-title">2 Years Of Warranty</h3>
+                  <div class="features__accordion-arrow">
+                    <i class="bx bxs-down-arrow"></i>
+                  </div>
+                </header>
+
+                <div class="features__accordion-content">
+                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="features__content">
+            <div class="features__header">
+              <span class="section__subtitle"> Our Benefits</span>
+              <h2 class="section__title">Benefits We Provided In Our Smartphone</h2>
+              <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ad voluptate soluta dolor inventore cupiditate fugiat repudiandae, ipsum laboriosam quaerat.</p>
+            </div>
+
+            <div class="features__list">
+              <article class="features__list-item">
+                <div class="features__list-content">
+                  <i class="bx bx-check features__list-icon"></i>
+                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__list-item">
+                <div class="features__list-content">
+                  <i class="bx bx-check features__list-icon"></i>
+                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__list-item">
+                <div class="features__list-content">
+                  <i class="bx bx-check features__list-icon"></i>
+                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__list-item">
+                <div class="features__list-content">
+                  <i class="bx bx-check features__list-icon"></i>
+                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+
+              <article class="features__list-item">
+                <div class="features__list-content">
+                  <i class="bx bx-check features__list-icon"></i>
+                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="features__buttons">
+              <button class="button features__button">Learn More</button>
+            </div>
+          </div>
+
+          <div class="features__list-images">
+            <div class="features__list-image">
+              <img src="./Assets/Images/home.png" alt="Features Images" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Subscribe Content ====================-->
+      <div class="subscribe__container container">
+        <div class="subscribe__content">
+          <h1 class="subscribe__title">Get Started With Us</h1>
+          <p class="subscribe__description">Subscribe and find out about our latest products, news and more.</p>
+          <button class="button subscribe__button">Get Started</button>
+        </div>
+      </div>
+
+      <!--==================== Article Content ====================-->
+      <section class="article section" id="article">
+        <div class="article__container container grid">
+          <span class="section__subtitle">Our Article</span>
+          <h2 class="section__title">Our Article With Trending Topic For This Week</h2>
+
+          <div class="article__content grid">
+            <article class="article__card">
+              <div class="article__image">
+                <img src="Assets/Images/article-img.jpg" alt="Article Image" class="article__img" />
+              </div>
+
+              <div class="article__data">
+                <div class="article__stats">
+                  <div class="article__stats-data">
+                    <div class="article__reaction">
+                      <i class="bx bx-time"></i>
+                      <span>12 Mins Ago</span>
+                    </div>
+                    <div class="article__reaction">
+                      <i class="bx bx-show"></i>
+                      <span>76,5K</span>
+                    </div>
+                  </div>
+
+                  <div class="article__reaction article__comment">
+                    <i class="bx bx-comment"></i>
+                    <span>12</span>
+                  </div>
+                </div>
+                <h2 class="article__title">4 Smartphones Recommendations</h2>
+                <p class="article__description">The blogs about smartphone recommendations will help you a lot for choosing a smartphones.</p>
+                <button class="button article__button">Read More</button>
+              </div>
+            </article>
+
+            <article class="article__card">
+              <div class="article__image">
+                <img src="Assets/Images/article-img.jpg" alt="Article Image" class="article__img" />
+              </div>
+
+              <div class="article__data">
+                <div class="article__stats">
+                  <div class="article__stats-data">
+                    <div class="article__reaction">
+                      <i class="bx bx-time"></i>
+                      <span>12 Mins Ago</span>
+                    </div>
+                    <div class="article__reaction">
+                      <i class="bx bx-show"></i>
+                      <span>76,5K</span>
+                    </div>
+                  </div>
+
+                  <div class="article__reaction article__comment">
+                    <i class="bx bx-comment"></i>
+                    <span>12</span>
+                  </div>
+                </div>
+                <h2 class="article__title">4 Smartphones Recommendations</h2>
+                <p class="article__description">The blogs about smartphone recommendations will help you a lot for choosing a smartphones.</p>
+                <button class="button article__button">Read More</button>
+              </div>
+            </article>
+
+            <article class="article__card">
+              <div class="article__image">
+                <img src="Assets/Images/article-img.jpg" alt="Article Image" class="article__img" />
+              </div>
+
+              <div class="article__data">
+                <div class="article__stats">
+                  <div class="article__stats-data">
+                    <div class="article__reaction">
+                      <i class="bx bx-time"></i>
+                      <span>12 Mins Ago</span>
+                    </div>
+                    <div class="article__reaction">
+                      <i class="bx bx-show"></i>
+                      <span>76,5K</span>
+                    </div>
+                  </div>
+
+                  <div class="article__reaction article__comment">
+                    <i class="bx bx-comment"></i>
+                    <span>12</span>
+                  </div>
+                </div>
+                <h2 class="article__title">4 Smartphones Recommendations</h2>
+                <p class="article__description">The blogs about smartphone recommendations will help you a lot for choosing a smartphones.</p>
+                <button class="button article__button">Read More</button>
+              </div>
+            </article>
           </div>
         </div>
       </section>
