@@ -21,28 +21,48 @@
 
         <a href="#" class="navbar__logo"> PHANTOM </a>
 
-        <ul class="navbar__container">
-          <li class="navbar__item">
-            <a href="#home" class="navbar__link active-link">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#about" class="navbar__link">What's New</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#products" class="navbar__link">Products</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#features" class="navbar__link">Features</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#article" class="navbar__link">Article</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#contact" class="navbar__link">Contact</a>
-          </li>
-        </ul>
+        <div class="navbar__menu">
+          <ul class="navbar__container">
+            <li class="navbar__item">
+              <a href="#home" class="navbar__link active-link">
+                Home
+                <i class="bx bxs-home"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#about" class="navbar__link">
+                What's New
+                <i class="bx bxs-megaphone"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#products" class="navbar__link">
+                Products
+                <i class="bx bxs-shopping-bag"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#features" class="navbar__link">
+                Features
+                <i class="bx bxs-devices"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#article" class="navbar__link">
+                Article
+                <i class="bx bxs-news"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#contact" class="navbar__link">
+                Contact
+                <i class="bx bxs-phone"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        <button class="button navbar__button">Login</button>
+        <button class="button navbar__button">Sign In</button>
       </nav>
     </header>
 
@@ -101,12 +121,13 @@
       <!--==================== About Content ====================-->
       <section class="section about" id="about">
         <div class="about__container container grid">
-          <span class="section__subtitle">What's New</span>
+          <span class="section__subtitle">What's New?</span>
           <h2 class="section__title">Our New Products</h2>
           <p class="section__description">We provided a New Smartphones with many awesome features for our customer satisfaction</p>
+          <h3 class="section__phones-brand"><span>Phantom</span> Spectrum Z1</h3>
 
           <div class="about__content grid">
-            <div class="about__data">
+            <div class="about__data-1">
               <article class="about__data-content">
                 <header class="about__data-header">
                   <i class="bx bxs-mobile about__data-icon"></i>
@@ -118,7 +139,7 @@
               <article class="about__data-content">
                 <header class="about__data-header">
                   <i class="bx bxs-battery about__data-icon"></i>
-                  <h3 class="about__data-title">5500 mAh Battery</h3>
+                  <h3 class="about__data-title">6500 mAh Battery</h3>
                 </header>
                 <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
               </article>
@@ -133,10 +154,10 @@
             </div>
 
             <div class="about__images">
-              <img src="./Assets/Images/home.png" alt="What's New Products Images" />
+              <img src="./Assets/Images/about.png" alt="What's New Products Images" />
             </div>
 
-            <div class="about__data">
+            <div class="about__data-2">
               <article class="about__data-content">
                 <header class="about__data-header">
                   <i class="bx bx-chip about__data-icon"></i>
@@ -148,7 +169,7 @@
               <article class="about__data-content">
                 <header class="about__data-header">
                   <i class="bx bxs-memory-card about__data-icon"></i>
-                  <h3 class="about__data-title">8GB RAM & 128GB Internal Storage</h3>
+                  <h3 class="about__data-title">16GB RAM & 512GB Internal Storage</h3>
                 </header>
                 <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
               </article>
@@ -172,6 +193,7 @@
         <div class="container">
           <span class="section__subtitle">Best Choises</span>
           <h2 class="section__title">Our Popular Products</h2>
+          <p class="section__description">Find out about our popular products and adjust to your needs</p>
 
           <!-- Cards Looped on script.js files and rendered in "products-container" as child elements (based on React concepts) -->
           <div class="products__container grid" id="products-container"></div>
@@ -187,7 +209,7 @@
         <div class="features__container container grid">
           <div class="features__images">
             <div class="features__image">
-              <img src="./Assets/Images/home.png" alt="Features Images" />
+              <img src="./Assets/Images/products-3.png" alt="Features Images" />
             </div>
           </div>
 
@@ -308,7 +330,7 @@
 
           <div class="features__list-images">
             <div class="features__list-image">
-              <img src="./Assets/Images/home.png" alt="Features Images" />
+              <img src="./Assets/Images/about.png" alt="Features Images" />
             </div>
           </div>
         </div>
@@ -327,95 +349,73 @@
       <section class="article section" id="article">
         <div class="article__container container grid">
           <span class="section__subtitle">Our Article</span>
-          <h2 class="section__title">Our Article With Trending Topic For This Week</h2>
+          <h2 class="section__title">Our Article For This Week</h2>
+          <p class="section__description">Lets find out about the information of latest technologies in our article that we always updated</p>
 
-          <div class="article__content grid">
-            <article class="article__card">
-              <div class="article__image">
-                <img src="Assets/Images/article-img.jpg" alt="Article Image" class="article__img" />
-              </div>
+          <!-- Cards Looped on script.js files and rendered in "article-container" as child elements (based on React concepts) -->
+          <div class="article__content grid" id="article-container"></div>
+        </div>
+      </section>
+      <!--==================== Contact Content ====================-->
+      <section class="contact section" id="contact">
+        <div class="contact__container container grid">
+          <div class="contact__maps">
+            <div class="contact__maps-canvas">
+              <iframe width="500" height="550" id="gmap_canvas" src="https://maps.google.com/maps?q=celular%20world%20denpasar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <a href="https://www.whatismyip-address.com"></a><br /><a href="https://www.embedgooglemap.net">create google maps for website</a>
+            </div>
+          </div>
 
-              <div class="article__data">
-                <div class="article__stats">
-                  <div class="article__stats-data">
-                    <div class="article__reaction">
-                      <i class="bx bx-time"></i>
-                      <span>12 Mins Ago</span>
-                    </div>
-                    <div class="article__reaction">
-                      <i class="bx bx-show"></i>
-                      <span>76,5K</span>
-                    </div>
-                  </div>
+          <div class="contact__content">
+            <span class="section__subtitle">Contact Us</span>
+            <h2 class="section__title">Get In Touch With Us</h2>
+            <p class="section__description">Is there a problem finding your dream smartphones? Need a guide in buying first smartphones? just contact us.</p>
 
-                  <div class="article__reaction article__comment">
-                    <i class="bx bx-comment"></i>
-                    <span>12</span>
-                  </div>
-                </div>
-                <h2 class="article__title">4 Smartphones Recommendations</h2>
-                <p class="article__description">The blogs about smartphone recommendations will help you a lot for choosing a smartphones.</p>
-                <button class="button article__button">Read More</button>
-              </div>
-            </article>
-
-            <article class="article__card">
-              <div class="article__image">
-                <img src="Assets/Images/article-img.jpg" alt="Article Image" class="article__img" />
-              </div>
-
-              <div class="article__data">
-                <div class="article__stats">
-                  <div class="article__stats-data">
-                    <div class="article__reaction">
-                      <i class="bx bx-time"></i>
-                      <span>12 Mins Ago</span>
-                    </div>
-                    <div class="article__reaction">
-                      <i class="bx bx-show"></i>
-                      <span>76,5K</span>
-                    </div>
-                  </div>
-
-                  <div class="article__reaction article__comment">
-                    <i class="bx bx-comment"></i>
-                    <span>12</span>
+            <div class="contact__card">
+              <div class="contact__card-box">
+                <div class="contact__card-info">
+                  <i class="bx bxs-phone-call"></i>
+                  <div>
+                    <h3 class="contact__card-title">Call Center</h3>
+                    <p class="contact__card-description">089-916-221-64</p>
                   </div>
                 </div>
-                <h2 class="article__title">4 Smartphones Recommendations</h2>
-                <p class="article__description">The blogs about smartphone recommendations will help you a lot for choosing a smartphones.</p>
-                <button class="button article__button">Read More</button>
-              </div>
-            </article>
-
-            <article class="article__card">
-              <div class="article__image">
-                <img src="Assets/Images/article-img.jpg" alt="Article Image" class="article__img" />
+                <button class="button contact__card-button">Call Now</button>
               </div>
 
-              <div class="article__data">
-                <div class="article__stats">
-                  <div class="article__stats-data">
-                    <div class="article__reaction">
-                      <i class="bx bx-time"></i>
-                      <span>12 Mins Ago</span>
-                    </div>
-                    <div class="article__reaction">
-                      <i class="bx bx-show"></i>
-                      <span>76,5K</span>
-                    </div>
-                  </div>
-
-                  <div class="article__reaction article__comment">
-                    <i class="bx bx-comment"></i>
-                    <span>12</span>
+              <div class="contact__card-box">
+                <div class="contact__card-info">
+                  <i class="bx bx-chat"></i>
+                  <div>
+                    <h3 class="contact__card-title">Chat</h3>
+                    <p class="contact__card-description">089-916-221-64</p>
                   </div>
                 </div>
-                <h2 class="article__title">4 Smartphones Recommendations</h2>
-                <p class="article__description">The blogs about smartphone recommendations will help you a lot for choosing a smartphones.</p>
-                <button class="button article__button">Read More</button>
+                <button class="button contact__card-button">Chat Now</button>
               </div>
-            </article>
+
+              <div class="contact__card-box">
+                <div class="contact__card-info">
+                  <i class="bx bxs-video"></i>
+                  <div>
+                    <h3 class="contact__card-title">Video Call</h3>
+                    <p class="contact__card-description">089-916-221-64</p>
+                  </div>
+                </div>
+                <button class="button contact__card-button">Video Call Now</button>
+              </div>
+
+              <div class="contact__card-box">
+                <div class="contact__card-info">
+                  <i class="bx bxs-envelope"></i>
+                  <div>
+                    <h3 class="contact__card-title">Message</h3>
+                    <p class="contact__card-description">089-916-221-64</p>
+                  </div>
+                </div>
+                <button class="button contact__card-button">Message Now</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -425,7 +425,7 @@
     <footer class="footer section">
       <div class="footer__container container grid">
         <div>
-          <a href="#" class="footer__logo">Phantom.</a>
+          <a href="#" class="footer__logo">PHANTOM</a>
           <p class="footer__description">
             Our vision is to bring a <br />
             new change of technologies.
@@ -521,6 +521,6 @@
     </footer>
 
     <!--=============== MAIN JS ===============-->
-    <script src="./Assets/Scripts/script.js"></script>
+    <script src="./Assets/Javascript/script.js"></script>
   </body>
 </html>
