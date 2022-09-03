@@ -1090,4 +1090,26 @@ button {
     justify-content: space-between;
     align-items: center;
   }
+
+  .article__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .footer__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
