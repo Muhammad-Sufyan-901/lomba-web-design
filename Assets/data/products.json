@@ -1,0 +1,44 @@
+[
+  {
+    "img": "./Assets/Images/products-1.png",
+    "prices": "$1279,17",
+    "category": "New Products",
+    "title": "Phantom ION RXZ10",
+    "description": "Introducing Smartphone with the most powerfull camera and smooth screen"
+  },
+  {
+    "img": "./Assets/Images/products-2.png",
+    "prices": "$1211,84",
+    "category": "Popular Products",
+    "title": "Phantom Spectrum Z1",
+    "description": "Most popular Gaming Phones with high processor performance and smooth refresh rate screen"
+  },
+  {
+    "img": "./Assets/Images/products-3.png",
+    "prices": "$1144,51",
+    "category": "Popular Products",
+    "title": "Phantom Spectrum X9",
+    "description": "Most powerfull with high performance makes your gaming experiences is more enjoyable."
+  },
+  {
+    "img": "./Assets/Images/products-4.png",
+    "prices": "$673,28",
+    "category": "New Products",
+    "title": "Phantom RGX T9",
+    "description": "Gaming Smartphones with high specifications for gaming needed with affordable prices"
+  },
+  {
+    "img": "./Assets/Images/products-5.png",
+    "prices": "$740,61",
+    "category": "Popular Products",
+    "title": "Phantom PRO 12",
+    "description": "Introducing Smartphone with the most smooth camera and great result of photos"
+  },
+  {
+    "img": "./Assets/Images/products-6.png",
+    "prices": "$471,30",
+    "category": "Popular Products",
+    "title": "Phantom XS Series",
+    "description": "First releases of Phantom Smartphones with enough specifications and cheap prices"
+  }
+]

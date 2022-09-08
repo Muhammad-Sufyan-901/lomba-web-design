@@ -73,9 +73,60 @@ function loopElements(data, container, child) {
 
 /*=============== Creating Function For Truncating Description ===============*/
 function truncateString(string) {
-  const length = 75;
+  const length = 70;
 
   return string.length > length ? string.substring(0, length) + " ..." : string;
+}
+
+/*=============== Creating Function For Filtering Categories ===============*/
+const allButton = document.getElementById("all-products");
+const popularButton = document.getElementById("popular-products");
+const newButton = document.getElementById("new-products");
+// const pricesButton = document.getElementById("price-products");
+
+allButton.addEventListener("click", () => {
+  popularButton.classList.remove("active");
+  newButton.classList.remove("active");
+  allButton.classList.add("active");
+
+  return loopElements(productsData, productsContainer, productsCard);
+});
+
+popularButton.addEventListener("click", () => {
+  allButton.classList.remove("active");
+  newButton.classList.remove("active");
+  popularButton.classList.add("active");
+
+  const popularData = productsData.filter(({ category }) => category === "Popular Products");
+
+  return loopElements(popularData, productsContainer, productsCard);
+});
+
+newButton.addEventListener("click", () => {
+  allButton.classList.remove("active");
+  popularButton.classList.remove("active");
+  newButton.classList.add("active");
+
+  const newData = productsData.filter(({ category }) => category === "New Products");
+
+  return loopElements(newData, productsContainer, productsCard);
+});
+
+/*=============== Creating Function For Time Since ===============*/
+function timeSince(date) {
+  const intervals = [
+    { label: "Year", seconds: 31536000 },
+    { label: "Month", seconds: 2592000 },
+    { label: "Day", seconds: 86400 },
+    { label: "Hour", seconds: 3600 },
+    { label: "Minute", seconds: 60 },
+    { label: "Second", seconds: 1 },
+  ];
+  const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+  const interval = intervals.find((i) => i.seconds < seconds);
+  const count = Math.floor(seconds / interval.seconds);
+
+  return `${count} ${interval.label}${count !== 1 ? "s" : ""} ago`;
 }
 
 /*=============== Calling The Function to Loop into Products Section and Passing Some Arguments ===============*/
@@ -104,15 +155,15 @@ const productsData = [
     description: "Most powerfull with high performance makes your gaming experiences is more enjoyable.",
   },
   {
-    img: "./Assets/Images/products-4(1).png",
-    prices: "$673,28",
+    img: "./Assets/Images/products-4.png",
+    prices: "$740,61",
     category: "New Products",
     title: "Phantom RGX T9",
     description: "Gaming Smartphones with high specifications for gaming needed with affordable prices",
   },
   {
     img: "./Assets/Images/products-5.png",
-    prices: "$740,61",
+    prices: "$673,28",
     category: "Popular Products",
     title: "Phantom PRO 12",
     description: "Introducing Smartphone with the most smooth camera and great result of photos",
@@ -158,55 +209,43 @@ const articleContainer = document.getElementById("article-container");
 const articleData = [
   {
     img: "Assets/Images/article-1.jpg",
-    uploadedAt: "12 Mins Ago",
-    views: "76,5K",
-    comments: "12",
-    title: "4 Smartphones Recommendations",
-    description: "The blogs about smartphone recommendations will help you a lot for choosing a smartphones.",
+    uploadedAt: new Date("September 08, 2022 13:24:00"),
+    title: "Pre-Order of Phantom Fold4 5G and Flip4 5G",
+    description: "Along with the announcement of the Phantom Fold4 5G and Phantom Flip4 5G, We also announced prices and availability for the Phantom Fold4 5G device in Indonesia.",
   },
   {
-    img: "Assets/Images/article-1.jpg",
-    uploadedAt: "12 Mins Ago",
-    views: "76,5K",
-    comments: "12",
-    title: "4 Smartphones Recommendations",
-    description: "The blogs about smartphone recommendations will help you a lot for choosing a smartphones.",
+    img: "Assets/Images/article-2.jpg",
+    uploadedAt: new Date("September 06, 2022 08:24:00"),
+    title: "4 Phantom Smartphones Recommendations",
+    description: "This year our company has developed many smartphones but if you are confused this article will help you find the best phantom smartphone so far",
   },
   {
-    img: "Assets/Images/article-1.jpg",
-    uploadedAt: "12 Mins Ago",
-    views: "76,5K",
-    comments: "12",
-    title: "4 Smartphones Recommendations",
-    description: "The blogs about smartphone recommendations will help you a lot for choosing a smartphones.",
+    img: "Assets/Images/article-3.jpg",
+    uploadedAt: new Date("September 03, 2022 15:21:00"),
+    title: "Phantom PRO 11 Review: Battery 6000mAh, Storage 128GB",
+    description: "The new smartphone Phantom Pro 11 was recently released and has entered the market in many countries this time we will review the results of our company's smartphone...",
   },
   {
-    img: "Assets/Images/article-1.jpg",
-    uploadedAt: "12 Mins Ago",
-    views: "76,5K",
-    comments: "12",
-    title: "4 Smartphones Recommendations",
-    description: "The blogs about smartphone recommendations will help you a lot for choosing a smartphones.",
+    img: "Assets/Images/article-4.jpg",
+    uploadedAt: new Date("August 28, 2022 09:18:00"),
+    title: "7 Phantom smartphones features you need to knows",
+    description: "To make it easier for users and to be able to use the potential of the Phantom smartphone well, we will provide some suggestions regarding the features...",
   },
   {
-    img: "Assets/Images/article-1.jpg",
-    uploadedAt: "12 Mins Ago",
-    views: "76,5K",
-    comments: "12",
-    title: "4 Smartphones Recommendations",
-    description: "The blogs about smartphone recommendations will help you a lot for choosing a smartphones.",
+    img: "Assets/Images/article-5.jpg",
+    uploadedAt: new Date("August 23, 2022 22:54:00"),
+    title: "How to boosts game performance on Phantom smartphone",
+    description: "Some Phantom smartphones have been given advanced system features to make the user's gaming performance smoother and more comfortable",
   },
   {
-    img: "Assets/Images/article-1.jpg",
-    uploadedAt: "12 Mins Ago",
-    views: "76,5K",
-    comments: "12",
-    title: "4 Smartphones Recommendations",
-    description: "The blogs about smartphone recommendations will help you a lot for choosing a smartphones.",
+    img: "Assets/Images/article-6.jpg",
+    uploadedAt: new Date("August 19, 2022 18:44:00"),
+    title: "Tips to make the Phantom Smartphone more durable",
+    description: "Some of the following tips can make you users of phantom smartphones can be more durable and not easily damaged",
   },
 ];
 
-const articleCard = ({ img, uploadedAt, views, comments, title, description }) => `
+const articleCard = ({ img, uploadedAt, title, description }) => `
     <article class="article__card">
       <div class="article__image">
         <img src="${img}" alt="Article Image" class="article__img" />
@@ -217,17 +256,17 @@ const articleCard = ({ img, uploadedAt, views, comments, title, description }) =
           <div class="article__stats-data">
             <div class="article__reaction">
               <i class="bx bx-time"></i>
-              <span>${uploadedAt}</span>
+              <span>${timeSince(uploadedAt)}</span>
             </div>
             <div class="article__reaction">
               <i class="bx bx-show"></i>
-              <span>${views}</span>
+              <span>${Math.floor(Math.random() * (1000 - 100) + 100) / 10}K</span>
             </div>
           </div>
 
           <div class="article__reaction article__comment">
             <i class="bx bx-comment"></i>
-            <span>${comments}</span>
+            <span>${Math.floor(Math.random() * 101) + 1}</span>
           </div>
         </div>
         <h2 class="article__title">${title}</h2>

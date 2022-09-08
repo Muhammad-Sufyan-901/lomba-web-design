@@ -72,7 +72,7 @@
       <section class="home section" id="home">
         <div class="home__container container grid">
           <div class="home__data">
-            <span class="home__discount">STARTED AT 60% OFF & FREE SHIPPING</span>
+            <span class="home__discount">STARTED AT <span>60%</span> OFF & FREE SHIPPING</span>
             <h1 class="home__title">
               Discover Most <br />
               Intelligent Smartphone
@@ -137,10 +137,18 @@
             <div class="about__data-1">
               <article class="about__data-content">
                 <header class="about__data-header">
+                  <i class="bx bxs-camera about__data-icon"></i>
+                  <h3 class="about__data-title">64MP of Camera</h3>
+                </header>
+                <p class="about__data-description">Comes with a quad rear camera system including a 64MP primary, makes sure that you get the best shots in both low light and daylight settings.</p>
+              </article>
+
+              <article class="about__data-content">
+                <header class="about__data-header">
                   <i class="bx bxs-mobile about__data-icon"></i>
                   <h3 class="about__data-title">6.5 inch OLED screen with ProMotion</h3>
                 </header>
-                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+                <p class="about__data-description">Provided big screen size with high resolution and displayed with world's best smartphones displays</p>
               </article>
 
               <article class="about__data-content">
@@ -148,15 +156,7 @@
                   <i class="bx bxs-battery about__data-icon"></i>
                   <h3 class="about__data-title">6500 mAh Battery</h3>
                 </header>
-                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
-              </article>
-
-              <article class="about__data-content">
-                <header class="about__data-header">
-                  <i class="bx bxs-camera about__data-icon"></i>
-                  <h3 class="about__data-title">64MP of Camera</h3>
-                </header>
-                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+                <p class="about__data-description">With large of battery capacity can stand long for 12 hours makes sure that you have best experiences</p>
               </article>
             </div>
 
@@ -168,9 +168,9 @@
               <article class="about__data-content">
                 <header class="about__data-header">
                   <i class="bx bx-chip about__data-icon"></i>
-                  <h3 class="about__data-title">Snapdragon 880 Chipset</h3>
+                  <h3 class="about__data-title">Snapdragon 888 Chipset</h3>
                 </header>
-                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+                <p class="about__data-description">Provided with latest chipsets transforms your device into a professional-quality camera, intelligent personal assistant, and elite gaming devices</p>
               </article>
 
               <article class="about__data-content">
@@ -178,7 +178,7 @@
                   <i class="bx bxs-memory-card about__data-icon"></i>
                   <h3 class="about__data-title">16GB RAM & 512GB Internal Storage</h3>
                 </header>
-                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+                <p class="about__data-description">We gives you very big of internal storage and RAM for maximum performance of our smartphones</p>
               </article>
 
               <article class="about__data-content">
@@ -186,7 +186,7 @@
                   <i class="bx bxs-thermometer about__data-icon"></i>
                   <h3 class="about__data-title">20° Average Temperature</h3>
                 </header>
-                <p class="about__data-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque ut deserunt iste?</p>
+                <p class="about__data-description">We provided "Super Cooler" Fan prevent your devices from overheated temperature</p>
               </article>
             </div>
           </div>
@@ -201,6 +201,11 @@
           <span class="section__subtitle">Best Choises</span>
           <h2 class="section__title">Our Popular Products</h2>
           <p class="section__description">Find out about our popular products and adjust to your needs</p>
+
+          <div class="buttons__container">
+            <button id="all-products" class="button__filter active">All</button> | <button id="popular-products" class="button__filter">Popular</button> |
+            <button id="new-products" class="button__filter">New</button>
+          </div>
 
           <!-- Cards Looped on script.js files and rendered in "products-container" as child elements (based on React concepts) -->
           <div class="products__container grid" id="products-container"></div>
@@ -224,7 +229,7 @@
             <div class="features__header">
               <span class="section__subtitle"> Our Excellence</span>
               <h2 class="section__title">Excellence We Provided In Our Smartphone</h2>
-              <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ad voluptate soluta dolor inventore cupiditate fugiat repudiandae, ipsum laboriosam quaerat.</p>
+              <p class="section__description">We offer several gifts that we have prepared if you buy our product that will not disappoint buyers, namely the following things, such as warranty, merch, and other things.</p>
             </div>
 
             <div class="features__images-mobile">
@@ -237,20 +242,22 @@
               <article class="features__accordion-item">
                 <header class="features__accordion-header">
                   <i class="bx bxs-award features__accordion-icon"></i>
-                  <h3 class="features__accordion-title">2 Years Of Warranty</h3>
+                  <h3 class="features__accordion-title">3 Years Of Warranty</h3>
                   <div class="features__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
                   </div>
                 </header>
 
                 <div class="features__accordion-content">
-                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__accordion-description">
+                    For every purchase of our smartphone, we will provide a 3 year warranty which is given in the event of damage such as system damage, we will not provide a warranty if the damage that occurs is the user's fault
+                  </p>
                 </div>
               </article>
 
               <article class="features__accordion-item">
                 <header class="features__accordion-header">
-                  <i class="bx bxs-certification features__accordion-icon"></i>
+                  <i class="bx bx-headphone features__accordion-icon"></i>
                   <h3 class="features__accordion-title">Free Merchendise</h3>
                   <div class="features__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
@@ -258,21 +265,24 @@
                 </header>
 
                 <div class="features__accordion-content">
-                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__accordion-description">
+                    For every purchase of our smartphone, we will provide free merchandise to our users in the form of our company's wireless headset product, 2 smartphone casings according to the type of smartphone purchased and free
+                    tempered glass.
+                  </p>
                 </div>
               </article>
 
               <article class="features__accordion-item">
                 <header class="features__accordion-header">
-                  <i class="bx bx-headphone features__accordion-icon"></i>
-                  <h3 class="features__accordion-title">50% Cashback In First Buy</h3>
+                  <i class="bx bxs-discount features__accordion-icon"></i>
+                  <h3 class="features__accordion-title">20% Cashback In First Buy</h3>
                   <div class="features__accordion-arrow">
                     <i class="bx bxs-down-arrow"></i>
                   </div>
                 </header>
 
                 <div class="features__accordion-content">
-                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__accordion-description">Especially for the first purchase of our smartphone product, we will give a 20% discount to users for every type of smartphone purchased.</p>
                 </div>
               </article>
 
@@ -286,23 +296,17 @@
                 </header>
 
                 <div class="features__accordion-content">
-                  <p class="features__accordion-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__accordion-description">For every purchase of our smartphone, we will provide users with an internet provider of 10 GB.</p>
                 </div>
               </article>
             </div>
           </div>
 
-          <!-- <div class="features__images-mobile">
-            <div class="features__image-mobile">
-              <img src="./Assets/Images/about.png" alt="Features Images" />
-            </div>
-          </div> -->
-
           <div class="features__content">
             <div class="features__header">
               <span class="section__subtitle"> Our Benefits</span>
               <h2 class="section__title">Benefits We Provided In Our Smartphone</h2>
-              <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ad voluptate soluta dolor inventore cupiditate fugiat repudiandae, ipsum laboriosam quaerat.</p>
+              <p class="section__description">In addition to the benefits above, there are also internal benefits that you will get if you buy a Smartphone compared to other Smartphones</p>
             </div>
 
             <div class="features__images-mobile">
@@ -315,35 +319,39 @@
               <article class="features__list-item">
                 <div class="features__list-content">
                   <i class="bx bx-check features__list-icon"></i>
-                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__list-description">We gives you the best prices with high quality for any needed such as gaming, photography or for professional purposes.</p>
                 </div>
               </article>
 
               <article class="features__list-item">
                 <div class="features__list-content">
                   <i class="bx bx-check features__list-icon"></i>
-                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__list-description">
+                    Our smartphones includes 5G carrier aggregation across TDD-FDD bands and a 5nm 5G baseband for long battery life. Plus, get the world's fastest uplink & downlink 5G speeds possible.
+                  </p>
                 </div>
               </article>
 
               <article class="features__list-item">
                 <div class="features__list-content">
                   <i class="bx bx-check features__list-icon"></i>
-                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__list-description">Up to 30% performance improvement, increasing responsiveness up to 20%. Make gameplay richer with 35% faster graphics rendering.</p>
                 </div>
               </article>
 
               <article class="features__list-item">
                 <div class="features__list-content">
                   <i class="bx bx-check features__list-icon"></i>
-                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__list-description">With a Triple ISP. Capture three 4K HDR videos, or three 28 MP photos, at a breakthrough 2.7 gigapixels per second—35% faster than the predecessor.</p>
                 </div>
               </article>
 
               <article class="features__list-item">
                 <div class="features__list-content">
                   <i class="bx bx-check features__list-icon"></i>
-                  <p class="features__list-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laborum quo animi magnam sint et vitae dolor optio ullam quos?</p>
+                  <p class="features__list-description">
+                    Security supports Truepic, a cryptography seal that ensures and verifies the authenticity of photos on your device. The world's first camera compliant with the Content Authenticity Initiative (CAI).
+                  </p>
                 </div>
               </article>
             </div>

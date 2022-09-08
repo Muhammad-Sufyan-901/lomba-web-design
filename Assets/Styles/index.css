@@ -268,6 +268,14 @@ button {
   margin-top: -1rem;
 }
 
+.home__discount span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.1rem;
+  background: linear-gradient(279deg, rgba(41, 72, 199, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  color: var(--color-white);
+  margin: 0 0.5rem;
+}
+
 .home__title {
   font-size: var(--biggest-font-size);
   line-height: 120%;
@@ -541,6 +549,33 @@ button {
   transform: translateX(0.25rem);
 }
 
+.products .buttons__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+
+.products .buttons__container .button__filter {
+  background-color: transparent;
+  border: none;
+  color: var(--color-light);
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: 0.1s;
+}
+
+.products .buttons__container .button__filter:hover {
+  color: var(--color-secondary);
+}
+
+.products .buttons__container .button__filter.active {
+  color: var(--color-primary);
+  font-weight: var(--font-semi-bold);
+  border-bottom: 2px solid var(--color-primary);
+}
+
 .show-more {
   display: flex;
   justify-content: center;
@@ -679,6 +714,7 @@ button {
 
 .accordion-open .features__accordion-icon {
   box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.1);
+  color: var(--color-dark-blue);
 }
 
 .accordion-open .features__accordion-arrow {
@@ -687,6 +723,10 @@ button {
 
 .accordion-open .features__accordion-arrow i {
   transform: rotate(-180deg);
+}
+
+.accordion-open .features__accordion-title {
+  color: var(--color-dark-blue);
 }
 
 .features__list {
@@ -948,7 +988,7 @@ button {
   padding: 6px;
   border-radius: 6px;
   font-size: 1.25rem;
-  color: var(--color-primary);
+  color: var(--color-dark-blue);
 }
 
 .contact__card-title {
@@ -1485,6 +1525,9 @@ button {
   }
   .features__images {
     display: none;
+  }
+  .features__accordion-title {
+    font-size: 0.85rem;
   }
 
   .subscribe__container {
