@@ -139,6 +139,7 @@ const productsData = [
     category: "New Products",
     title: "Phantom ION RXZ10",
     description: "Introducing Smartphone with the most powerfull camera and smooth screen",
+    href: "./Assets/pages/buy-pages/buy-1.html",
   },
   {
     img: "./Assets/Images/products-2.png",
@@ -146,6 +147,7 @@ const productsData = [
     category: "Popular Products",
     title: "Phantom Spectrum Z1",
     description: "Most popular Gaming Phones with high processor performance and smooth refresh rate screen",
+    href: "./Assets/pages/buy-pages/buy-2.html",
   },
   {
     img: "./Assets/Images/products-3.png",
@@ -153,6 +155,7 @@ const productsData = [
     category: "Popular Products",
     title: "Phantom Spectrum X9",
     description: "Most powerfull with high performance makes your gaming experiences is more enjoyable.",
+    href: "./Assets/pages/buy-pages/buy-3.html",
   },
   {
     img: "./Assets/Images/products-4.png",
@@ -160,6 +163,7 @@ const productsData = [
     category: "New Products",
     title: "Phantom RGX T9",
     description: "Gaming Smartphones with high specifications for gaming needed with affordable prices",
+    href: "./Assets/pages/buy-pages/buy-4.html",
   },
   {
     img: "./Assets/Images/products-5.png",
@@ -167,6 +171,7 @@ const productsData = [
     category: "Popular Products",
     title: "Phantom PRO 12",
     description: "Introducing Smartphone with the most smooth camera and great result of photos",
+    href: "./Assets/pages/buy-pages/buy-5.html",
   },
   {
     img: "./Assets/Images/products-6.png",
@@ -174,10 +179,11 @@ const productsData = [
     category: "Popular Products",
     title: "Phantom XS Series",
     description: "First releases of Phantom Smartphones with enough specifications and cheap prices",
+    href: "./Assets/pages/buy-pages/buy-6.html",
   },
 ];
 
-const productsCard = ({ img, prices, category, title, description }) => `
+const productsCard = ({ img, prices, category, title, description, href }) => `
     <article class="products__card">
       <img src="${img}" alt="Products Image" class="products__img" />
 
@@ -189,11 +195,11 @@ const productsCard = ({ img, prices, category, title, description }) => `
         <h2 class="products__title">${title}</h2>
         <p class="products__description">${truncateString(description)}</p>
         <div class="products__buttons">
-          <a href="#" class="products__buy-button">
+          <a href="${href}" class="products__buy-button">
             Buy
             <i class="bx bx-cart"></i>
           </a>
-          <a href="#" class="products__view-button">
+          <a href="${href}" class="products__view-button">
             View More
             <i class="bx bx-chevron-right"></i>
           </a>
