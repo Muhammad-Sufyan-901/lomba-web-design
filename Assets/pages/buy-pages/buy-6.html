@@ -19,7 +19,7 @@
       <nav class="navbar">
         <i class="bx bx-menu toggle__menu" id="toggle-menu"></i>
 
-        <a href="#" class="navbar__logo"> PHANTOM </a>
+        <a href="../../../index.html" class="navbar__logo"> PHANTOM </a>
 
         <div class="navbar__menu">
           <ul class="navbar__container">
@@ -62,7 +62,7 @@
           </ul>
         </div>
 
-        <button class="button navbar__button">Sign In</button>
+        <a href="../login-pages/login.html" class="button navbar__button">Sign In</a>
       </nav>
     </header>
 
@@ -95,7 +95,7 @@
           <div class="cart__options">
             <button class="cart__option-button active-option" id="color-button">Colors</button>
             <button class="cart__option-button" id="spec-button">Specification</button>
-            <button class="cart__option-button">Details</button>
+            <button class="cart__option-button" id="details-button">Details</button>
           </div>
 
           <div class="cart__color" id="cart-color">
@@ -125,7 +125,7 @@
             <div>
               <h3 class="cart__spec-title">RAM :</h3>
               <div class="cart__spec-options">
-                <div class="cart__spec-option">6</div>
+                <div class="cart__spec-option active-spec">6</div>
                 <div class="cart__spec-option">8</div>
                 <div class="cart__spec-option">12</div>
                 <div class="cart__spec-option">16</div>
@@ -134,12 +134,16 @@
             <div>
               <h3 class="cart__spec-title">Storage :</h3>
               <div class="cart__spec-options">
-                <div class="cart__spec-option">64</div>
+                <div class="cart__spec-option active-spec">64</div>
                 <div class="cart__spec-option">128</div>
                 <div class="cart__spec-option">256</div>
                 <div class="cart__spec-option">512</div>
               </div>
             </div>
+          </div>
+
+          <div class="cart__details" id="cart-details">
+            <p>First releases of Phantom Smartphones with enough specifications and cheap prices</p>
           </div>
 
           <div class="cart__add">
@@ -264,25 +268,31 @@
       /*=============== Declare DOM ===============*/
       const cartColor = document.getElementById("cart-color");
       const cartSpec = document.getElementById("cart-spec");
+      const cartDetails = document.getElementById("cart-details");
       const colorButton = document.getElementById("color-button");
       const specButton = document.getElementById("spec-button");
+      const detailsButton = document.getElementById("details-button");
       const plusButton = document.getElementById("plus");
       const minusButton = document.getElementById("minus");
       const displayQuantity = document.getElementById("display");
       const priceBeforeDisplay = document.getElementById("prices-before");
       const pricesAfterDisplay = document.getElementById("prices-after");
+      const specOptions1 = document.querySelectorAll(".cart__spec-option-1");
+      const specOptions2 = document.querySelectorAll(".cart__spec-option-2");
       const cartReview = document.querySelector(".cart__review-title");
 
       /*=============== Declare Changeable Value ===============*/
       let quantityValue = 0;
-      let priceBefore = 471.3;
+      let priceBefore = 1279.17;
       let priceAfter = priceBefore - (priceBefore * 20) / 100;
 
       /*=============== Switching to Color Options ===============*/
       colorButton.addEventListener("click", () => {
         specButton.classList.remove("active-option");
+        detailsButton.classList.remove("active-option");
         colorButton.classList.add("active-option");
 
+        cartDetails.style.display = "none";
         cartSpec.style.display = "none";
         cartColor.style.display = "grid";
       });
@@ -290,10 +300,23 @@
       /*=============== Switching to Specifications Options ===============*/
       specButton.addEventListener("click", () => {
         colorButton.classList.remove("active-option");
+        detailsButton.classList.remove("active-option");
         specButton.classList.add("active-option");
 
+        cartDetails.style.display = "none";
         cartColor.style.display = "none";
         cartSpec.style.display = "flex";
+      });
+
+      /*=============== Switching to Specifications Options ===============*/
+      detailsButton.addEventListener("click", () => {
+        specButton.classList.remove("active-option");
+        colorButton.classList.remove("active-option");
+        detailsButton.classList.add("active-option");
+
+        cartColor.style.display = "none";
+        cartSpec.style.display = "none";
+        cartDetails.style.display = "block";
       });
 
       /*=============== Increase Price and Amount ===============*/
@@ -305,7 +328,7 @@
         pricesAfterDisplay.innerHTML = "$" + (priceAfter * quantityValue).toFixed(2);
       }
 
-      /*=============== Increase Price and Amount ===============*/
+      /*=============== Decrease Price and Amount ===============*/
       function decreaseQuantity() {
         quantityValue === 0 ? quantityValue : quantityValue--;
 

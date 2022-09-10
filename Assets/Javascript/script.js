@@ -82,12 +82,14 @@ function truncateString(string) {
 const allButton = document.getElementById("all-products");
 const popularButton = document.getElementById("popular-products");
 const newButton = document.getElementById("new-products");
-// const pricesButton = document.getElementById("price-products");
 
 allButton.addEventListener("click", () => {
   popularButton.classList.remove("active");
   newButton.classList.remove("active");
   allButton.classList.add("active");
+
+  showMoreButton.textContent = "Show More";
+  showMoreButton.classList.remove("less");
 
   return loopElements(productsData, productsContainer, productsCard);
 });
@@ -96,6 +98,9 @@ popularButton.addEventListener("click", () => {
   allButton.classList.remove("active");
   newButton.classList.remove("active");
   popularButton.classList.add("active");
+
+  showMoreButton.textContent = "Show More";
+  showMoreButton.classList.remove("less");
 
   const popularData = productsData.filter(({ category }) => category === "Popular Products");
 
@@ -106,6 +111,9 @@ newButton.addEventListener("click", () => {
   allButton.classList.remove("active");
   popularButton.classList.remove("active");
   newButton.classList.add("active");
+
+  showMoreButton.textContent = "Show More";
+  showMoreButton.classList.remove("less");
 
   const newData = productsData.filter(({ category }) => category === "New Products");
 
@@ -154,7 +162,7 @@ const productsData = [
     prices: "$1144,51",
     category: "Popular Products",
     title: "Phantom Spectrum X9",
-    description: "Most powerfull with high performance makes your gaming experiences is more enjoyable.",
+    description: "Most powerfull with high performance makes your gaming experiences is more enjoyable",
     href: "./Assets/pages/buy-pages/buy-3.html",
   },
   {
@@ -183,6 +191,33 @@ const productsData = [
   },
 ];
 
+const moreProductsData = productsData.concat([
+  {
+    img: "./Assets/Images/products-7.png",
+    prices: "$404,57",
+    category: "New Products",
+    title: "Phantom Prime X12",
+    description: "Most powerfull with high performance makes your gaming experiences is more enjoyable",
+    href: "./Assets/pages/buy-pages/buy-7.html",
+  },
+  {
+    img: "./Assets/Images/products-8.png",
+    prices: "$472,01",
+    category: "Popular Products",
+    title: "Phantom Reaver Z10",
+    description: "Most popular Gaming Phones with high processor performance and smooth refresh rate screen",
+    href: "./Assets/pages/buy-pages/buy-8.html",
+  },
+  {
+    img: "./Assets/Images/products-9.png",
+    prices: "$269,69",
+    category: "New Products",
+    title: "Phantom Minima S7",
+    description: "Introducing Smartphone with the most powerfull camera and smooth screen",
+    href: "./Assets/pages/buy-pages/buy-9.html",
+  },
+]);
+
 const productsCard = ({ img, prices, category, title, description, href }) => `
     <article class="products__card">
       <img src="${img}" alt="Products Image" class="products__img" />
@@ -208,6 +243,31 @@ const productsCard = ({ img, prices, category, title, description, href }) => `
     </article>`;
 
 loopElements(productsData, productsContainer, productsCard);
+
+/*=============== Creating Function For Showing More Products ===============*/
+const showMoreButton = document.querySelector(".show-more__button");
+
+showMoreButton.addEventListener("click", () => {
+  if (!showMoreButton.classList.contains("less")) {
+    showMoreButton.textContent = "Show Less";
+    showMoreButton.classList.add("less");
+
+    popularButton.classList.remove("active");
+    newButton.classList.remove("active");
+    allButton.classList.add("active");
+
+    loopElements(moreProductsData, productsContainer, productsCard);
+  } else {
+    showMoreButton.textContent = "Show More";
+    showMoreButton.classList.remove("less");
+
+    popularButton.classList.remove("active");
+    newButton.classList.remove("active");
+    allButton.classList.add("active");
+
+    loopElements(productsData, productsContainer, productsCard);
+  }
+});
 
 /*=============== Calling The Function to Loop into Article Section and Passing Some Arguments ===============*/
 const articleContainer = document.getElementById("article-container");
