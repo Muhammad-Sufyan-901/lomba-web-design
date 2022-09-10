@@ -146,13 +146,17 @@
             <p>Most powerfull with high performance makes your gaming experiences is more enjoyable</p>
           </div>
 
+          <div class="cart__result">
+            <h2></h2>
+          </div>
+
           <div class="cart__add">
             <button class="cart__add-quantity">
               <i class="bx bx-minus" onclick="decreaseQuantity()"></i>
               <div id="display">1</div>
               <i class="bx bx-plus" onclick="increaseQuantity()"></i>
             </button>
-            <button class="cart__add-button">Add To Cart</button>
+            <button class="cart__add-button" onclick="cartResultText()">Add To Cart</button>
           </div>
         </div>
       </div>
@@ -280,9 +284,10 @@
       const specOptions1 = document.querySelectorAll(".cart__spec-option-1");
       const specOptions2 = document.querySelectorAll(".cart__spec-option-2");
       const cartReview = document.querySelector(".cart__review-title");
+      const cartResult = document.querySelector(".cart__result h2");
 
       /*=============== Declare Changeable Value ===============*/
-      let quantityValue = 0;
+      let quantityValue = 1;
       let priceBefore = 404.57;
       let priceAfter = priceBefore - (priceBefore * 20) / 100;
 
@@ -339,6 +344,25 @@
 
       /*=============== Make Dummy Views ===============*/
       cartReview.innerHTML = Math.floor(Math.random() * 100000) + " Reviews";
+
+      /*=============== Adding Result Text After Click "Add To Cart"===============*/
+      function cartResultText() {
+        if (quantityValue === 0) {
+          cartResult.textContent = "Please Fill The Amount Before Adding To Cart";
+          cartResult.classList.remove("green");
+          cartResult.classList.add("red");
+          setTimeout(() => {
+            cartResult.textContent = "";
+          }, 3000);
+        } else {
+          cartResult.textContent = "Congratulations! Successed Adding Your Items Into Cart";
+          cartResult.classList.remove("red");
+          cartResult.classList.add("green");
+          setTimeout(() => {
+            cartResult.textContent = "";
+          }, 3000);
+        }
+      }
     </script>
   </body>
 </html>

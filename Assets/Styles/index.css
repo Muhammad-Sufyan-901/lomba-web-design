@@ -1355,6 +1355,20 @@ button {
   font-weight: var(--font-bold);
 }
 
+.cart__result h2 {
+  font-size: 1.25rem;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+}
+
+.cart__result h2.red {
+  color: #cd2020;
+}
+
+.cart__result h2.green {
+  color: #159312;
+}
+
 /*=============== Scroll Bar ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;

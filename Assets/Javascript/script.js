@@ -191,7 +191,8 @@ const productsData = [
   },
 ];
 
-const moreProductsData = productsData.concat([
+const moreProductsData = [
+  ...productsData,
   {
     img: "./Assets/Images/products-7.png",
     prices: "$404,57",
@@ -216,7 +217,31 @@ const moreProductsData = productsData.concat([
     description: "Introducing Smartphone with the most powerfull camera and smooth screen",
     href: "./Assets/pages/buy-pages/buy-9.html",
   },
-]);
+  {
+    img: "./Assets/Images/products-10.png",
+    prices: "$188,73",
+    category: "Popular Products",
+    title: "Phantom Nitro Z8",
+    description: "Introducing Smartphone with the most smooth camera and great result of photos",
+    href: "./Assets/pages/buy-pages/buy-10.html",
+  },
+  {
+    img: "./Assets/Images/products-11.png",
+    prices: "$181,99",
+    category: "New Products",
+    title: "Phantom Horizon H30",
+    description: "Gaming Smartphones with high specifications for gaming needed with affordable prices",
+    href: "./Assets/pages/buy-pages/buy-11.html",
+  },
+  {
+    img: "./Assets/Images/products-12.png",
+    prices: "$114,58",
+    category: "Popular Products",
+    title: "Phantom Infinity GX",
+    description: "Most powerfull with high performance makes your gaming experiences is more enjoyable",
+    href: "./Assets/pages/buy-pages/buy-12.html",
+  },
+];
 
 const productsCard = ({ img, prices, category, title, description, href }) => `
     <article class="products__card">
