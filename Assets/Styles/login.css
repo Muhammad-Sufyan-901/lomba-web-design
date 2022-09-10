@@ -64,6 +64,7 @@ body {
   background-image: url(../Images/login-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .container {
@@ -217,6 +218,15 @@ body {
 
   .login__box-button {
     width: 30%;
+    font-size: 0.85rem;
+  }
+
+  .login__box-title {
+    font-size: 1.75rem;
+  }
+
+  .login__box-register {
+    font-size: 0.75rem;
   }
 }
 
