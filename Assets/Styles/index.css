@@ -54,6 +54,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
@@ -1711,6 +1712,7 @@ button {
   .navbar__menu {
     width: 90%;
     padding: 1rem 1.3rem;
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
   }
   .navbar__container {
     justify-content: center;
@@ -1917,9 +1919,13 @@ button {
 
   .cart__container {
     grid-template-columns: 1fr;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
   .cart__images {
-    height: 325px;
+    width: 18.5rem;
+    height: 17rem;
+    margin-right: 4rem;
   }
   .cart__images img {
     width: 100%;
@@ -1948,8 +1954,9 @@ button {
     font-size: 1rem;
   }
   .cart__result {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+    margin-right: 3rem;
     text-align: center;
   }
 }
